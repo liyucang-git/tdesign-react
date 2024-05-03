@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { TagInput, Popup, Tag, Space } from 'tdesign-react';
+import { TagInput, Popup, Tag, Space, TagInputValue } from 'tdesign-react';
 
 export default function TagInputCollapsedExample() {
-  const [tags, setTags] = useState(['Vue', 'React', 'Miniprogram', 'Angular', 'Flutter']);
+  const [tags, setTags] = useState<TagInputValue>(['Vue', 'React', 'Miniprogram', 'Angular', 'Flutter']);
   const renderCollapsedItems = ({ collapsedTags }) => (
     <Popup
       key={'tags'}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { TreeSelect, Tag, Tooltip, Space } from 'tdesign-react';
+import { TreeSelect, Tag, Tooltip, Space, TreeSelectProps, TreeSelectValue } from 'tdesign-react';
 
-const options = [
+const options: TreeSelectProps['data'] = [
   {
     label: '广东省',
     value: 'guangdong',
@@ -33,8 +33,8 @@ const options = [
 ];
 
 export default function Example() {
-  const [value, setValue] = useState(['guangzhou', 'shenzhen']);
-  const [customizeValue, setCustomizeValue] = useState(['guangzhou', 'shenzhen']);
+  const [value, setValue] = useState<TreeSelectValue>(['guangzhou', 'shenzhen']);
+  const [customizeValue, setCustomizeValue] = useState<TreeSelectValue>(['guangzhou', 'shenzhen']);
   return (
     <Space direction="vertical" style={{ width: 300 }}>
       <TreeSelect
